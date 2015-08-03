@@ -1,0 +1,29 @@
+.strike-title {
+  overflow: hidden;
+  text-align: center;
+}
+.strike-title__label {
+  display: inline-block;
+  position: relative;
+
+  &:before,
+  &:after {
+    border-bottom: 1px solid gray;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 5000px;
+  }
+        
+  &:before {
+    left: 100%;
+    margin-left: 20px;
+  }
+  
+  &:after {
+    margin-right: 20px;
+    right: 100%;
+  }
+}
