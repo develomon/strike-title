@@ -1,3 +1,4 @@
+/* Strike title */
 .strike-title {
   overflow: hidden;
   text-align: center;
@@ -5,25 +6,27 @@
 .strike-title__label {
   display: inline-block;
   position: relative;
+}
+.strike-title__label::before,
+.strike-title__label::after {
+  background-color: black;
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 5000px;
+}
+.strike-title__label::before {
+  left: 100%;
+  margin-left: 20px;
+}  
+.strike-title__label::after {
+  right: 100%;
+  margin-right: 20px;
+}
 
-  &:before,
-  &:after {
-    border-bottom: 1px solid gray;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    width: 5000px;
-  }
-        
-  &:before {
-    left: 100%;
-    margin-left: 20px;
-  }
-  
-  &:after {
-    margin-right: 20px;
-    right: 100%;
-  }
+/* Strike title - Bordered */
+.strike-title--bordered .strike-title__label {
+  border: solid 1px black;
+  padding: 10px 20px;
 }
